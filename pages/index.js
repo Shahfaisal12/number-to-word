@@ -165,8 +165,8 @@ const Index = () => {
 
   return (
     <>
-      <div className="number-conversion d-flex align-items-center vh-100 w-75 m-auto">
-        <div className="container w-50">
+      <div className="number-conversion d-flex align-items-center vh-100 m-auto">
+        <div className="container">
           <div className="row">
           <div className="col-12">
             <div className="value my-5 text-center">
