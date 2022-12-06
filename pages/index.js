@@ -4,8 +4,14 @@ import Button from "@mui/material/Button";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+// import Link from 'next/link'
+import { useRouter } from 'next/router'
+
 
 const Index = () => {
+
+  const router = useRouter()
+
   const [bdt, setBdt] = useState(undefined);
   const [convertedAmount, setConvertedAmount] = useState("");
 
@@ -202,6 +208,45 @@ const Index = () => {
               >
                 Covert
               </Button>
+            </div>
+            <h5 className="mt-5 text-danger">Please Open Your console When Click On Below Button</h5>
+            <div className="col-md-12 d-flex justify-content-between mt-3">
+            <Button
+                variant="outlined"
+                className=""
+                size="large"
+                // href="/CallBackHell"
+                onClick={() => router.push('/CallBackHell')}
+              >
+                CallBackHell
+              </Button>
+              <Button
+              variant="outlined"
+              className=""
+              size="large"
+              // href="/CallBackHell"
+              onClick={() => router.push('/Promises')}
+            >
+              Promises
+            </Button>
+            <Button
+            variant="outlined"
+            className=""
+            size="large"
+            // href="/CallBackHell"
+            onClick={() => router.push('/AsyncAwait')}
+          >
+          AsyncAwait
+          </Button>
+          <Button
+          variant="outlined"
+          className=""
+          size="large"
+          // href="/CallBackHell"
+          onClick={() => router.push('/Cards')}
+        >
+        Random value
+        </Button>
             </div>
           </div>
         </div>
