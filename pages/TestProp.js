@@ -99,7 +99,7 @@ const TestProp = () => {
 
   //Create a array based on probability weight
   var probability = months
-    .map((v, i) => Array(v[2]).fill(i))
+    .map((v, i) => Array(v[12]).fill(i))
     .reduce((c, v) => c.concat(v), []);
 
   //Random select from probability array
@@ -177,6 +177,9 @@ const TestProp = () => {
                 </Typography>
                 <Typography gutterBottom variant="h5" component="div">
                   <span className="text-danger">Token#</span>: {value.month}
+                </Typography>
+                <Typography gutterBottom variant="h5" component="div">
+                  <span className="text-danger">Propbility</span>: {rand}
                 </Typography>
                 <Stack
                   direction="row"
