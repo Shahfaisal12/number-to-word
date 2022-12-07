@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 // import Link from 'next/link'
-import { useRouter } from 'next/router'
-
+import { useRouter } from "next/router";
 
 const Index = () => {
-
-  const router = useRouter()
+  const router = useRouter();
 
   const [bdt, setBdt] = useState(undefined);
   const [convertedAmount, setConvertedAmount] = useState("");
@@ -174,19 +172,21 @@ const Index = () => {
       <div className="number-conversion d-flex align-items-center vh-100 m-auto">
         <div className="container">
           <div className="row">
-          <div className="col-12">
-            <div className="value my-5 text-center">
-           {convertedAmount ?
-            <Card sx={{ minWidth: 275 }}>
-            <CardContent>
-              <Typography variant="h5" component="div">
-               {convertedAmount}
-              </Typography>
-            </CardContent>
-          </Card>
-            : ''}
+            <div className="col-12">
+              <div className="value my-5 text-center">
+                {convertedAmount ? (
+                  <Card sx={{ minWidth: 275 }}>
+                    <CardContent>
+                      <Typography variant="h5" component="div">
+                        {convertedAmount}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                ) : (
+                  ""
+                )}
+              </div>
             </div>
-          </div>
             <div className="col-md-12">
               <TextField
                 name="bdt"
@@ -209,44 +209,66 @@ const Index = () => {
                 Covert
               </Button>
             </div>
-            <h5 className="mt-5 text-danger">Please Open Your console When Click On Below Button</h5>
-            <div className="col-md-12 d-flex justify-content-between mt-3">
-            <Button
+            <h5 className="mt-5 text-danger">
+              Please Open Your console When Click On Below Button
+            </h5>
+            <div className="col-md-12 d-flex flex-wrap justify-content-between mt-3">
+              <Button
                 variant="outlined"
                 className=""
                 size="large"
                 // href="/CallBackHell"
-                onClick={() => router.push('/CallBackHell')}
+                onClick={() => router.push("/CallBackHell")}
               >
                 CallBackHell
               </Button>
               <Button
+                variant="outlined"
+                className=""
+                size="large"
+                // href="/CallBackHell"
+                onClick={() => router.push("/Promises")}
+              >
+                Promises
+              </Button>
+              <Button
+                variant="outlined"
+                className=""
+                size="large"
+                // href="/CallBackHell"
+                onClick={() => router.push("/AsyncAwait")}
+              >
+                AsyncAwait
+              </Button>
+            </div>
+            <h5 className="mt-5 text-danger">
+              Get Random card from Array
+            </h5>
+            <div className="col-md-12 d-flex flex-wrap justify-content-between mt-3">
+            <Button
               variant="outlined"
               className=""
               size="large"
-              // href="/CallBackHell"
-              onClick={() => router.push('/Promises')}
+              onClick={() => router.push("/Cards")}
             >
-              Promises
+              Random value
             </Button>
             <Button
-            variant="outlined"
-            className=""
-            size="large"
-            // href="/CallBackHell"
-            onClick={() => router.push('/AsyncAwait')}
-          >
-          AsyncAwait
-          </Button>
-          <Button
-          variant="outlined"
-          className=""
-          size="large"
-          // href="/CallBackHell"
-          onClick={() => router.push('/Cards')}
-        >
-        Random value
-        </Button>
+              variant="outlined"
+              className=""
+              size="large"
+              onClick={() => router.push("/TestCard")}
+            >
+              Random value2
+            </Button>
+            <Button
+              variant="outlined"
+              className=""
+              size="large"
+              onClick={() => router.push("/TestProp")}
+            >
+              Propabilty Random value
+            </Button>
             </div>
           </div>
         </div>
