@@ -102,6 +102,8 @@ const TestProp = () => {
     .map((v, i) => Array(v[12]).fill(i))
     .reduce((c, v) => c.concat(v), []);
 
+    // console.log(probability);
+
   //Random select from probability array
   var rand = probability[Math.floor(Math.random() * probability.length)];
 
@@ -123,9 +125,9 @@ const TestProp = () => {
         <h5 className="my-5 text-danger text-center fw-bold">
           Select Random Card from Probability in the list
         </h5>
-        {months.map((data) => {
+        {months.map((data, index) => {
           return (
-            <div className="col-md-4 mb-3" key={data.id}>
+            <div className="col-md-4 mb-3" key={index}>
               <Card sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                   <CardMedia
@@ -176,10 +178,10 @@ const TestProp = () => {
                   Congratulation
                 </Typography>
                 <Typography gutterBottom variant="h5" component="div">
-                  <span className="text-danger">Token#</span>: {value.month}
+                  <span className="text-danger">Token#: </span> {value.month}
                 </Typography>
                 <Typography gutterBottom variant="h5" component="div">
-                  <span className="text-danger">Propbility</span>: {rand}
+                  <span className="text-danger">Propbility: </span> {rand+1}
                 </Typography>
                 <Stack
                   direction="row"
