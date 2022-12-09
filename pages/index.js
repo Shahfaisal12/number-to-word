@@ -269,6 +269,14 @@ const Index = () => {
             >
               Propabilty Random value
             </Button>
+            <Button
+              variant="outlined"
+              className="mt-3"
+              size="large"
+              onClick={() => router.push("/Random")}
+            >
+              Random Prob
+            </Button>
             </div>
           </div>
         </div>

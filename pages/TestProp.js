@@ -128,7 +128,7 @@ const TestProp = () => {
         {months.map((data, index) => {
           return (
             <div className="col-md-4 mb-3" key={index}>
-              <Card sx={{ maxWidth: 345 }}>
+              <Card >
                 <CardActionArea>
                   <CardMedia
                     component="img"
